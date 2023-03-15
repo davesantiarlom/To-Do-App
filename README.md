@@ -6,6 +6,19 @@ The classic To-Do application where a user can write down all the things he want
 
 Built with: React JS, CSS using React Hooks (useState, useEffect, useRef, useContext) and react-beautiful-dnd, react-icons, uuidv4...
 
+## Instructions
+
+First clone this repository.
+
+    $ git clone https://github.com/davesantiarlom/To-Do-App.git
+Install dependencies. Make sure you already have nodejs & npm installed in your system.
+
+    $ npm install
+
+Run it
+
+    $ npm start
+
 ## User Stories
 
 ✓ User can see an `input` field where he can type in a to-do item
@@ -27,16 +40,3 @@ Built with: React JS, CSS using React Hooks (useState, useEffect, useRef, useCon
 X User can see the date when he created the to-do
 
 ✓ When closing the browser window the to-do's will be stored and when the User returns, the data will be retrieved
-
-## Instructions
-
-First clone this repository.
-
-    $ git clone https://github.com/davesantiarlom/To-Do-App.git
-Install dependencies. Make sure you already have nodejs & npm installed in your system.
-
-    $ npm install
-
-Run it
-
-    $ npm start
