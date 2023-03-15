@@ -14,8 +14,6 @@ const AppProvider = ({ children }) => {
   const [editId, setEditId] = useState(null);
   const [name, setName] = useState("");
   const [filter, setFilter] = useState("all");
-  const [location, setLocation] = useState({});
-  const refContainer = useRef(null);
 
   const removeTask = (id) => {
     setTasks(tasks.filter((task) => task.id !== id));
@@ -38,11 +36,9 @@ const AppProvider = ({ children }) => {
   };
 
   return (
-    <AppContext.Provider
-      value={{tasks, setTasks, removeTask, toggleDone, refContainer, isEditing, setIsEditing, editId, setEditId,
-        editTask, name, setName, getTasks, filter, setFilter, inputRef, location, setLocation}}
-    >
-    {children}
+    <AppContext.Provider value={{tasks, setTasks, removeTask, toggleDone, isEditing, setIsEditing, editId, setEditId,
+      editTask, name, setName, getTasks, filter, setFilter, inputRef}}>
+      {children}
     </AppContext.Provider>
   );
 };

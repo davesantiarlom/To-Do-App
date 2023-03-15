@@ -26,6 +26,7 @@ const App = () => {
         name: name,
         completed: false,
       };
+      console.log(newTask);
       setTasks([...tasks, newTask]);
       setName("");
     }

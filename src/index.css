@@ -3,7 +3,7 @@
 :root {
 	--alt-bg-color: #866d6d4d;
 	--font-color: #000000;
-	--alt-font-color: #222222;
+	--alt-font-color: #000000;
 	--primary-color: #ffffff;
 	--secondary-color: #000000;
 }
@@ -27,7 +27,7 @@ body {
   max-width: 900px;
   padding: 30px;
   margin: 0 auto;
-    background: var(--alt-bg-color);
+    background: #2e2d2d60;
   border-radius: 20px;
   text-align: center;
 }
@@ -150,25 +150,6 @@ button:hover {
 }
 .no-tasks {
   color: var(--font-color);
-}
-.alert {
-  margin-bottom: 1rem;
-  width: 230px;
-  height: 80px;
-  display: grid;
-  align-items: center;
-  text-align: center;
-  font-size: 0.9rem;
-  color: var(--alt-font-color);
-  border-radius: 0.25rem;
-  letter-spacing: var(--spacing);
-  text-transform: capitalize;
-  background: #eee;
-  position: absolute;
-  bottom: 0;
-  left: -100%;
-  transition: all 0.5s cubic-bezier(0.6, -0.28, 0.74, 0.05);
-  box-shadow: 0 0 20px 0px #00000045;
 }
 .color-container {
   position: absolute;

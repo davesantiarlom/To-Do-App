@@ -25,7 +25,7 @@ const List = () => {
 
   return (
     <Droppable droppableId='droppable-1'>
-      {(provided, snapshot) => (
+      {(provided) => (
         <ul
           className='tasks-wrapper'
           ref={provided.innerRef}

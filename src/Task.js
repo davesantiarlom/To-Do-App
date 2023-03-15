@@ -4,36 +4,23 @@ import { MdCheckBoxOutlineBlank, MdCheckBox, MdDeleteOutline} from "react-icons/
 import { FiEdit } from "react-icons/fi";
 import { useGlobalContext } from "./context";
 
-const Task = ({ id, name, completed, color, index }) => {
+const Task = ({ id, name, completed, index }) => {
   const { removeTask, toggleDone, editTask } = useGlobalContext();
 
   return (
     <Draggable key={id} draggableId={"draggable-" + id} index={index}>
       {(provided, snapshot) => (
-        <li
-          ref={provided.innerRef}
-          {...provided.draggableProps}
-          {...provided.dragHandleProps}
+        <li ref={provided.innerRef}{...provided.draggableProps}{...provided.dragHandleProps}
           style={{
             ...provided.draggableProps.style,
             boxShadow: snapshot.isDragging ? "0 0 5rem #666" : "none",
-            opacity: snapshot.isDragging
-              ? "1"
-              : provided.draggableProps.style.opacity,
-            backgroundColor: color,
+            opacity: snapshot.isDragging ? "1" : provided.draggableProps.style.opacity
           }}
-          className={`task ${completed && "task-done"}`}
-        >
+          className={`task ${completed && "task-done"}`}>
           <p>{name}</p>
-          <button onClick={() => toggleDone(id)}>
-            {completed ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
-          </button>
-          <button onClick={() => removeTask(id)}>
-            <MdDeleteOutline />
-          </button>
-          <button onClick={() => editTask(id)}>
-            <FiEdit />
-          </button>
+          <button onClick={() => toggleDone(id)}>{completed ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}</button>
+          <button onClick={() => removeTask(id)}><MdDeleteOutline /></button>
+          <button onClick={() => editTask(id)}><FiEdit /></button>
         </li>
       )}
     </Draggable>
