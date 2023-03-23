@@ -37,6 +37,4 @@ Run it
 
 ✓ User can see a list with all the active to-do's
 
-X User can see the date when he created the to-do
-
 ✓ When closing the browser window the to-do's will be stored and when the User returns, the data will be retrieved
